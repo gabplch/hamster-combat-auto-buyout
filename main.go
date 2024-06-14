@@ -122,7 +122,7 @@ func FilterUpgrades(upgradesForBuy []UpgradeForBuy, balance float64) []UpgradeFo
 		}
 
 		// skip upgrades with cooldown
-		if 0 == upgradeForBuy.CooldownSeconds {
+		if upgradeForBuy.CooldownSeconds > 0 {
 			continue
 		}
 
